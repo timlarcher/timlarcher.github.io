@@ -1,11 +1,11 @@
 # Site settings
 author: Tim Larcher
-title: 
+title: Data Science Observer
 header-img: img/home-bg.png
 email: timlarcher@yahoo.com
 copyright_name: Tim Larcher
 description: > # this means to ignore newlines until "baseurl:"
-  
+  All Things Data
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  timlarcher
