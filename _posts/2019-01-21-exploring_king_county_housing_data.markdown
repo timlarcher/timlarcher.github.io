@@ -9,7 +9,7 @@ Today's entry will walk you through an evaluation of housing data for King count
 
 The best way to experience this is to follow along and either cut and pase my code or write your own.
 
-# Load the dataset and explore it.
+## Load the dataset and explore it.
 
 ```
 import numpy as np
