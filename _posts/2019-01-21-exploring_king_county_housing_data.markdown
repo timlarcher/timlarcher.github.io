@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Exploring King County Housing Data"
-date:       2019-01-21 22:22:45 +0000
+date:       2019-01-21 17:22:46 -0500
 permalink:  exploring_king_county_housing_data
 ---
 
@@ -11,6 +11,7 @@ The best way to experience this is to follow along and either cut and pase my co
 
 # Load the dataset and explore it.
 
+```
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -20,6 +21,7 @@ df_orig = pd.read_csv('kc_house_data.csv')
 print(df_orig.info())
 print(df_orig.head())
 print(df_orig.describe())
+```
 
 Info() will tell you about the columns; head() will print the first five rows; and describe() will provide statistics about the NUMERIC columns.
 
@@ -35,6 +37,7 @@ For now I am going to drop all the columns that I don't see a need for now. I ca
 
 Next we will clean up the datatypes, drop columns, fix NaNs, and get another feel for the data with histograms.
 
+```
 df = df_orig.drop(['date','id','view','lat','long','sqft_living15','sqft_lot15'], axis=1)
 df.head()
 df.waterfront.fillna(0,inplace=True)
@@ -50,9 +53,12 @@ df.sqft_basement = df.sqft_basement.astype('int64')
 df.yr_renovated = df.yr_renovated.astype('int64')
 print(df.isna().sum())
 df.head()
+```
 
 Next the histograms:
 
+```
 df.hist(figsize=(20,18),bins=10)
+```
 
 
